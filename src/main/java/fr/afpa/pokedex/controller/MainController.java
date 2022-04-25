@@ -10,7 +10,7 @@ public class MainController {
 
         @GetMapping("/")
         public String index(Model model) {
-            String name = "Jasur";
+            String name = "Pokemon";
             model.addAttribute("name", name);
             return "index";
         }

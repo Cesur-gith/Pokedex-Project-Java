@@ -1,15 +1,15 @@
 package fr.afpa.pokedex.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 
 @Entity
-public class Pokedex {
+public class Pokemon {
 
         @Id
         @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "pok_seq")
         @SequenceGenerator(name = "pok_seq", initialValue = 1000, allocationSize = 1)
-
         private Long id;
 
         private String name;
@@ -21,10 +21,10 @@ public class Pokedex {
         private String imageUrl;
 
 
-        @ManyToOne
-        private Type type;
+        @ManyToMany
+        private List<Type> type;
 
-        @OneToOne
+        @ManyToOne
         private Species species;
 
         public Long getId() {
@@ -91,6 +91,21 @@ public class Pokedex {
                 this.imageUrl = imageUrl;
         }
 
+        public List<Type> getType() {
+                return type;
+        }
+
+        public void setType(List<Type> type) {
+                this.type = type;
+        }
+
+        public Species getSpecies() {
+                return species;
+        }
+
+        public void setSpecies(Species species) {
+                this.species = species;
+        }
 
         public String toString() {
                 return "pokemon{" +
