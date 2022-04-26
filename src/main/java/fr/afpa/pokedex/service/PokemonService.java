@@ -18,9 +18,16 @@ public class PokemonService {
             return pokemonRepository.findAll();
     }
 
-        public List<Pokemon> getAllPokemonDetail() {
-            return pokemonRepository.findAllPokemonDetail();
+        public Pokemon getAllPokemon1() {
+        return pokemonRepository.findAll1();
     }
+
+    public Pokemon getOneByLabel(Long label) {
+        return pokemonRepository.findOneByLabel(label);
+    }
+
+
+
 
 
 }
