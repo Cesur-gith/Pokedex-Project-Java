@@ -7,15 +7,16 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
+public interface PokemonRepository extends JpaRepository<Pokemon, Long>{
 
+    @Query(value = "select * from pokemon;", nativeQuery = true)
+    public List<Pokemon> findAll();
 
-    @Repository
-    public interface PokemonRepository extends JpaRepository<Pokemon, Long>{
+    @Query(value="SELECT * FROM pokemon", nativeQuery = true)
+    public Pokemon findAll1();
 
-        @Query(value = "select * from pokemon;", nativeQuery = true)
-        public List<Pokemon> findAll();
-
-        @Query(value = "select * from pokemon;", nativeQuery = true)
-        List<Pokemon> findAllPokemonDetail();
-    }
+    @Query(value="select label from type;", nativeQuery = true)
+    public Pokemon findOneByLabel(Long label);
+}
 

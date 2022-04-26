@@ -23,15 +23,17 @@ public class PokemonController {
         return "pokemonLists";
     }
 
-    @GetMapping("/pokemonDetail")
-    public String detailPage(Model model) {
-        List<Pokemon>pokemon = pokemonService.getAllPokemonDetail();
-        model.addAttribute("pokemon", pokemon);
-        return "pokemonDetail";
+    @GetMapping("/pokemon")
+    public String detailPage(Model model , @RequestParam Long id) {
+        List<Pokemon>pokemon = pokemonService.getAllPokemon();
+        model.addAttribute("pokemon");
+        return "pokemon";
     }
 
 
 
-    }
+
+
+}
 
 

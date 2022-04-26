@@ -13,7 +13,7 @@ public class Pokemon {
         private Long id;
 
         private String name;
-        private int atack;
+        private int attack;
         private int defense;
         private int speed;
         private int attSpe;
@@ -26,6 +26,7 @@ public class Pokemon {
 
         @ManyToOne
         private Species species;
+
 
         public Long getId() {
                 return id;
@@ -44,11 +45,11 @@ public class Pokemon {
         }
 
         public int getAtack() {
-                return atack;
+                return attack;
         }
 
-        public void setAtack(int atack) {
-                this.atack = atack;
+        public void setAtack(int attack) {
+                this.attack = attack;
         }
 
         public int getDefense() {
@@ -111,7 +112,7 @@ public class Pokemon {
                 return "pokemon{" +
                         "id=" + id +
                         ", name='" + name + '\'' +
-                        ", atack=" + atack +
+                        ", attack=" + attack +
                         ", defense=" + defense +
                         ", speed=" + speed +
                         ", attSpe=" + attSpe +
