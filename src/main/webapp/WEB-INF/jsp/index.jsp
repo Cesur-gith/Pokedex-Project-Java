@@ -9,6 +9,7 @@
                 <center><h4 style="color:#008000">Welcome ${name}</h4></center>
                     <div class="d-grid gap-2 m-2">
                          <a class="btn btn-secondary" href="/pokemonLists">Pokemon Lists</a>
+                         <a class="btn btn-secondary" href="/pokemonDetails">Pokemon Details</a>
                    </div>
 </body>
 </html>

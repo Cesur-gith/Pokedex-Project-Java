@@ -12,9 +12,10 @@ import java.util.List;
     @Repository
     public interface PokemonRepository extends JpaRepository<Pokemon, Long>{
 
-
-        @Query(value = "SELECT * FROM pokemon", nativeQuery = true)
+        @Query(value = "select * from pokemon;", nativeQuery = true)
         public List<Pokemon> findAll();
 
+        @Query(value = "select * from pokemon;", nativeQuery = true)
+        List<Pokemon> findAllPokemonDetail();
     }
 
