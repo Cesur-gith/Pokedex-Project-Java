@@ -18,6 +18,10 @@ public class PokemonService {
             return pokemonRepository.findAll();
     }
 
+        public List<Pokemon> getAllPokemonDetail() {
+            return pokemonRepository.findAllPokemonDetail();
+    }
+
 
 }
 
