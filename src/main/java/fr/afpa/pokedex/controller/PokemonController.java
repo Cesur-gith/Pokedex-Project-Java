@@ -25,13 +25,11 @@ public class PokemonController {
 
     @GetMapping("/pokemon")
     public String detailPage(Model model , @RequestParam Long id) {
-        List<Pokemon>pokemon = pokemonService.getAllPokemon();
-        model.addAttribute("pokemon");
+        Pokemon pokemon = pokemonService.getOneById(id);
+        System.out.println(pokemon);
+        model.addAttribute("pokemon", pokemon);
         return "pokemon";
     }
-
-
-
 
 
 }

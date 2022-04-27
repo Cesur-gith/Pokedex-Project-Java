@@ -15,8 +15,9 @@ public class TypeService {
     @Autowired
     private TypeRepository typeRepository;
 
-    public List<Type> getAllType() {
-        return TypeRepository.findAll();
 
+    public List<Type> getAllType() {
+        return typeRepository.findAll();
     }
 }
+

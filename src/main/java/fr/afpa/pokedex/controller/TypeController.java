@@ -21,9 +21,10 @@ public class TypeController {
 
     @GetMapping("/pokemonTypes")
     public String typePage(Model model) {
-        List<Type>type = typeService.getAllType();
-        model.addAttribute("type" );
+        List<Type> type = typeService.getAllType();
+        model.addAttribute("type", type);
         return "pokemonTypes";
+
     }
 
 }

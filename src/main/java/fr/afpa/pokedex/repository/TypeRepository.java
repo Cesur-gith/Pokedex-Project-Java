@@ -11,8 +11,11 @@ import java.util.List;
 @Repository
 public interface TypeRepository extends JpaRepository<Type, Long>  {
 
+
     @Query(value = "select * from type;", nativeQuery = true)
-    public static List<Type> findAll();
+    public List<Type> findAll();
+
+
 
 
 }

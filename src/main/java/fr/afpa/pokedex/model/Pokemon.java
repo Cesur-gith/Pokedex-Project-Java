@@ -27,7 +27,6 @@ public class Pokemon {
         @ManyToOne
         private Species species;
 
-
         public Long getId() {
                 return id;
         }
@@ -44,11 +43,11 @@ public class Pokemon {
                 this.name = name;
         }
 
-        public int getAtack() {
+        public int getAttack() {
                 return attack;
         }
 
-        public void setAtack(int attack) {
+        public void setAttack(int attack) {
                 this.attack = attack;
         }
 
@@ -108,8 +107,9 @@ public class Pokemon {
                 this.species = species;
         }
 
+        @Override
         public String toString() {
-                return "pokemon{" +
+                return "Pokemon{" +
                         "id=" + id +
                         ", name='" + name + '\'' +
                         ", attack=" + attack +
@@ -118,6 +118,8 @@ public class Pokemon {
                         ", attSpe=" + attSpe +
                         ", defSpe=" + defSpe +
                         ", imageUrl='" + imageUrl + '\'' +
+                        ", type=" + type +
+                        ", species=" + species +
                         '}';
         }
 }

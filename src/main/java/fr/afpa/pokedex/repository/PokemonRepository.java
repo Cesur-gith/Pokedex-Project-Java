@@ -13,10 +13,8 @@ public interface PokemonRepository extends JpaRepository<Pokemon, Long>{
     @Query(value = "select * from pokemon;", nativeQuery = true)
     public List<Pokemon> findAll();
 
-    @Query(value="SELECT * FROM pokemon", nativeQuery = true)
-    public Pokemon findAll1();
 
-    @Query(value="select label from type;", nativeQuery = true)
-    public Pokemon findOneByLabel(Long label);
+    @Query(value="select * from pokemon where id = ?1", nativeQuery = true)
+    Pokemon findOneById(Long id);
 }
 
