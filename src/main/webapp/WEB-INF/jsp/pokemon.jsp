@@ -1,3 +1,5 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,8 +25,16 @@
                     <li class="list-group-item">AttSpeed: ${pokemon.attSpe}</li><br>
                     <li class="list-group-item">DefSpeed: ${pokemon.defSpe}</li><br>
                     <li class="list-group-item">Visual: <img src="${pokemon.imageUrl}" width="50"/></li>
-                    <a href="/" class="btn btn-secondary">Back</a>
+
               </ul>
+                        <form:form method="POST" action="delete-pokemon?id=${pokemon.id}">
+                             <input class="btn btn-outline-danger" type="submit" value="Delete">
+                        </form:form>
+
+                        <form:form>
+                         <input type="button" value="Cancel" onclick="history.back()">
+                        </form:form>
+
         </div>
     </div>
               <center>

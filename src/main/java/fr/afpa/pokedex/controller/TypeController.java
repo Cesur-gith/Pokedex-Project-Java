@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
@@ -22,6 +24,20 @@ public class TypeController {
         model.addAttribute("type", type);
         return "pokemonTypes";
 
+    }
+
+    @GetMapping("/type-form")
+    public String formType(Model model) throws Exception {
+        Type type = new Type();
+        model.addAttribute("type", type);
+        return "formType";
+    }
+
+    @PostMapping("/add-type")
+    public String addType(@ModelAttribute Type type) {
+        System.out.println("POST:" + type);
+        typeService.save(type);
+        return "redirect:/info";
     }
 
 }

@@ -18,5 +18,17 @@ public class TypeService {
     public List<Type> getAllType() {
         return typeRepository.findAll();
     }
+
+
+    public void save(Type type) {
+        typeRepository.save(type);
+    }
+
+
+    public List<Type> getAll() {
+        return  typeRepository.findAll();
+    }
+
+
 }
 

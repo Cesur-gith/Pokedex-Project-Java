@@ -14,6 +14,7 @@ public class Type {
     private String description;
     private String imageUrl;
 
+
     public Long getId() {
         return id;
     }

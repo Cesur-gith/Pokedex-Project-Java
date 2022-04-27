@@ -7,14 +7,18 @@
 </head>
 <body style="background-color:blue;" >
 
-<br> <br><br><br>
+<br> <br><br>
                 <center><h1 style="color:#ffffff">&#x1F525 Welcome to ${name} War Center &#x1F525</h1></center>
                     <div class="d-grid gap-2 m-2" >
                     <br>
                          <a class="btn btn-secondary" href="/pokemonLists"><h2>Pokemon Lists </h2></a> <br>
                          <a class="btn btn-secondary" href="/pokemonTypes"><h2>Pokemon Types</h2></a><br>
                          <a class="btn btn-secondary" href="/speciesList"><h2>Pokemon Species</h2></a><br>
-                         <a class="btn btn-secondary" href="/pokemonCreation"><h2>Create Your Own Pokemon</h2></a>
+                         <a class="btn btn-secondary" href="/pokemon-form"><h2>Create Your Own Pokemon</h2></a><br>
+
                    </div>
+
+
+
 </body>
 </html>

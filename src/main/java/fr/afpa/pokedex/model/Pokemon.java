@@ -107,7 +107,6 @@ public class Pokemon {
                 this.species = species;
         }
 
-
         @Override
         public String toString() {
                 return "Pokemon{" +

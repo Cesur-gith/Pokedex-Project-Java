@@ -16,5 +16,8 @@ public interface PokemonRepository extends JpaRepository<Pokemon, Long>{
 
     @Query(value="select * from pokemon where id = ?1", nativeQuery = true)
     Pokemon findOneById(Long id);
+
+
+
 }
 

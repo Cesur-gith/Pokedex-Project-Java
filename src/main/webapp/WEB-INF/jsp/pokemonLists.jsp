@@ -18,21 +18,34 @@
                     </tr>
                 </thead><br>
                 <tbody>
-                     <c:forEach items="${pokemon}" var="pokemon" >
+
+                     <c:forEach items="${pokemonList}" var="pokemon" >
 
                         <tr>
                             <td>
                                 <h2><a href="pokemon?id=${pokemon.id}"><center> Name: ${pokemon.name} /  ID: ${pokemon.id}  <img src="${pokemon.imageUrl}" width="50"/></center></a> <h2><br>
                             </td>
+
                         </tr>
+
+
+
                     </c:forEach>
 
+
+                            <form:form>
+                                 <input type="button" value="Back" onclick="history.back()">
+                             </form:form>
                 </tbody>
             </table>
-                            <a href="/" class="btn btn-secondary">Back</a>
 
         </div>
+
+
+
     </div>
+
+
 
 </body>
 </html>
