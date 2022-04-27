@@ -1,7 +1,6 @@
 package fr.afpa.pokedex.service;
 
 
-import fr.afpa.pokedex.model.Pokemon;
 import fr.afpa.pokedex.model.Type;
 import fr.afpa.pokedex.repository.TypeRepository;
 import org.springframework.beans.factory.annotation.Autowired;

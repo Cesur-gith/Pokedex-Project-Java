@@ -11,8 +11,7 @@ public class Species {
     private Long id;
     private String label;
     private String description;
-
-
+    private String imageUrl;
 
     public Long getId() {
         return id;
@@ -38,6 +37,13 @@ public class Species {
         this.description = description;
     }
 
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
 
     @Override
     public String toString() {
@@ -45,6 +51,7 @@ public class Species {
                 "id=" + id +
                 ", label='" + label + '\'' +
                 ", description='" + description + '\'' +
+                ", imageUrl='" + imageUrl + '\'' +
                 '}';
     }
 }

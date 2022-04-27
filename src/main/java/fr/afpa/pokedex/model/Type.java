@@ -12,8 +12,7 @@ public class Type {
     private Long id;
     private String label;
     private String description;
-
-
+    private String imageUrl;
 
     public Long getId() {
         return id;
@@ -39,7 +38,13 @@ public class Type {
         this.description = description;
     }
 
+    public String getImageUrl() {
+        return imageUrl;
+    }
 
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
 
     @Override
     public String toString() {
@@ -47,6 +52,7 @@ public class Type {
                 "id=" + id +
                 ", label='" + label + '\'' +
                 ", description='" + description + '\'' +
+                ", imageUrl='" + imageUrl + '\'' +
                 '}';
     }
 }

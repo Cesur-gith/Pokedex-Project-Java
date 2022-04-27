@@ -1,10 +1,12 @@
 package fr.afpa.pokedex.service;
 
 
-import fr.afpa.pokedex.model.Pokemon;
+import fr.afpa.pokedex.model.Species;
 import fr.afpa.pokedex.repository.SpeciesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class SpeciesService {
@@ -12,11 +14,7 @@ public class SpeciesService {
     @Autowired
     private SpeciesRepository speciesRepository;
 
-
-    public Pokemon getOneById(Long id) {
-        return speciesRepository.findOneById(id);
+    public List<Species> getAllSpecies() {
+        return speciesRepository.findAll();
     }
-
-
-
 }
