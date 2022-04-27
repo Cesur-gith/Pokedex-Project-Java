@@ -17,6 +17,5 @@ public interface SpeciesRepository extends JpaRepository<Species, Long> {
     @Query(value = "SELECT * FROM species", nativeQuery = true)
     public List<Species> findAll();
 
-    @Query(value = "select * from pokemon where id = ?1", nativeQuery = true)
-    Pokemon findOneById(Long id);
+
 }

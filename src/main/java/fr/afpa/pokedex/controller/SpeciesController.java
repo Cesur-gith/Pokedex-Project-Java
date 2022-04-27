@@ -11,20 +11,19 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
+
 @Controller
 public class SpeciesController {
-
 
     @Autowired
     private SpeciesService speciesService;
 
-
-    @GetMapping("/species")
-    public String pokemonPage(Model model , @RequestParam Long id) {
-        Pokemon species = speciesService.getOneById(id);
-        System.out.println(species);
-        model.addAttribute("pokemons" , species  );
-        return "pokemon";
+    @GetMapping("/speciesList")
+    public String listPage(Model model) {
+        List<Species> species = speciesService.getAllSpecies();
+        model.addAttribute("species", species);
+        return "speciesList";
     }
 
 }

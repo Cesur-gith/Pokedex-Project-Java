@@ -24,12 +24,14 @@ public class PokemonController {
     }
 
     @GetMapping("/pokemon")
-    public String detailPage(Model model , @RequestParam Long id) {
+    public String pokemonPage(Model model , @RequestParam Long id) {
         Pokemon pokemon = pokemonService.getOneById(id);
         System.out.println(pokemon);
         model.addAttribute("pokemon", pokemon);
         return "pokemon";
     }
+
+
 
 
 }
